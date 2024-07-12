@@ -1,0 +1,150 @@
+.site-header {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: $white-clr;
+    z-index: 50;
+    padding: 5px 0;
+}
+.header {
+    @include Display($items: center, $space: space-between, $gap: 0px);
+}
+.header__list {
+    @include Display($items: center, $space: start, $gap: 40px);
+}
+.site-header__logo {
+    display: inline-block;
+}
+.header__content-wrapper {
+    @include Display($items: center, $space: start, $gap: 64px);
+}
+.header__item-link {
+    @include TextStyle(
+    $FF: Public Sans,
+    $MB: 0px,
+    $FS: 15px,
+    $FW: 700,
+    $CLR: $text-clr,
+    $LH: 17.63px,
+    $CASE: capitalize
+    );
+    transition: all 0.3s linear;
+    &:hover {
+        color: $title-clr;
+    }
+}
+.header__link {
+    @include ButtonStyle($FF: Public Sans, $BTN_W: 173px, $BTN_PY: 15px, $BTN_BG_CLR: $pink-clr, $BTN_BR_Radius: 30px, $BTN_Border_CLR: $pink-clr, $BTN_FS: 15px, $BTN_FW: 700, $BTN_LH: 17.63px, $BTN_CLR: $white-clr, $BTN_CASE: capitalize
+    );
+    display: inline-block;
+    letter-spacing: -0.11538461595773697px;
+    text-align: center;
+    transition: all 0.3s linear;
+    &:hover {
+        opacity: 75%;
+    }  
+}   
+.header__hidden-btn {
+    display: none;
+    z-index: 0;
+}
+.header__hidden-content {
+    display: none;
+}
+.header__hidden-list{
+    display: none;
+}
+.header__hidden-link{
+    display: none;
+    z-index: 0;
+}
+// Responsive
+// Tablet Start
+
+@media (max-width: 910px) {
+    body {
+        background-image: url(/images/tablet-body-bg-img.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center top;
+    }
+}
+// Tablet End
+// Phone Start
+@media (max-width:700px) {
+    .site-header {
+        width: 100%;
+        top: 0;
+        position: fixed;
+        background-color: $white-clr;
+        z-index: 50;
+        padding: 5px 0;
+    }
+    body {
+        background-image: url(/images/phone-body-bg-img.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center top;
+    }
+    .header__list {
+        display: none;
+    }
+    .header__link {
+        display: none;
+    }
+    .header__hidden-btn {
+        display: inline-block;
+        position: absolute;
+        border: none;
+        z-index: 52;
+        top: 1.5vh;
+        right: 4vh;
+    }
+    .header__hidden-content {
+        display: inline-block;
+        position: absolute;
+        background-color: #1B262F;
+        height: 100vh;
+        z-index: 51;
+        width: 35vh;
+        right: 0;
+        top: -100%;
+        transition: all 0.3s linear;
+    }
+    .header__hidden-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        margin-top: 139px;
+    }
+    .header__hidden-text--link {
+        font-family: Public Sans;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 23.5px;
+        text-align: center;
+        color: #B7BCC0;
+    }
+    .header__hidden-link {
+        display: block;
+        margin: 0 auto;
+        margin-top: 32px;
+        width: 252px;
+        border: 1px solid $pink-clr;
+        border-radius: 30px;
+        padding: 15px 0;
+        font-family: Public Sans;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 17.63px;
+        letter-spacing: -0.11538461595773697px;
+        text-align: center;
+        color: $white-clr;
+        
+    }
+    .show{
+        top: 0;
+    }
+}
+// Phone End

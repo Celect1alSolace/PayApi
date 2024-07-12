@@ -1,0 +1,90 @@
+.contact-section {
+    padding-bottom: 96px;
+}
+.contact {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.contact__title {
+    @include TextStyle($FF:DM Serif Display, $MB:0px, $FS:48px, $FW:400, $CLR:$title-clr, $LH:56px, $CASE:inherit);
+    letter-spacing: -0.3692307770252228px;
+}
+.contact__label {
+    margin-bottom: 16px;
+    position: relative;
+    width: 445px;
+    display: flex;
+    align-items: center;
+}
+.contact__input {
+    width: 100%;
+    background-color: $white-clr;
+    outline: none;
+    padding: 15px 5px 15px 27px;
+    border: none;
+    border-radius: 30px;
+    font-family: Public Sans;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.63px;
+    color: $text-clr;
+    
+    &:focus{
+        box-shadow: 0 0 10px 3px $title-clr;
+    }
+    &::placeholder{
+        @include TextStyle($FF:Public Sans, $MB:0px, $FS:15px, $FW:700, $CLR:$text-clr, $LH:17.63px, $CASE:inherit);
+        font-family: Public Sans;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 17.63px;
+        color: $text-clr;
+    }
+}
+.contact__btn {
+    position: absolute;
+    @include ButtonStyle($FF: Public Sans, $BTN_W: 173px, $BTN_PY: 15px, $BTN_BG_CLR: $pink-clr, $BTN_BR_Radius: 30px, $BTN_Border_CLR: $pink-clr, $BTN_FS: 15px, $BTN_FW: 700, $BTN_LH: 17.63px, $BTN_CLR: $white-clr, $BTN_CASE: capitalize
+    );
+    display: inline-block;
+    letter-spacing: -0.11538461595773697px;
+    text-align: center;
+    transition: all 0.3s linear;
+    &:hover {
+        opacity: 75%;
+    }
+    right: 0;
+}
+
+// Responsive
+// Tablet Start
+@media(max-width:1250px){
+    .contact-section {
+        padding-bottom: 100px;
+    }
+    .contact {
+        @include Display($items:center, $space:center, $gap:40px);
+        flex-direction: column;
+    }
+}
+// Tablet End
+// Phone Start
+@media (max-width: 770px){
+    .contact-section {
+        padding-bottom: 80px;
+    }
+    .contact__label {
+        position: absolute;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        position: relative;
+        width: 327px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .contact__btn{
+        width: 327px;
+        margin-top: 64px;
+    }
+}
+// Phone End

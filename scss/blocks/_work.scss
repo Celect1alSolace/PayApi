@@ -1,0 +1,127 @@
+.work-section {
+    max-width: 100%;
+    padding: 100px 0;
+    background-color:  #1B262F;
+    background-image: url(/images/work-bg.png);
+    background-repeat: no-repeat;
+    size: 780px 780px;
+    background-position: left top;
+}
+.work {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.work__content-wrapper {
+    width: 445px;
+}
+.work__title {
+    @include TextStyle($FF:DM Serif Display, $MB:24px, $FS:48px, $FW:400, $CLR:$white-clr, $LH:56px, $CASE:capitalize);
+    letter-spacing: -0.3692307770252228px;
+}
+.work__text {
+    @include TextStyle($FF:Public Sans, $MB:32px, $FS:15px, $FW:400, $CLR:#FBFCFE, $LH:28px, $CASE:capitalize);
+}
+.work__link {
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s linear;
+    @include ButtonStyle($FF:Public Sans,$BTN_W:129px, $BTN_PY:15px, $BTN_BG_CLR:transparent,$BTN_BR_Radius:30px, $BTN_Border_CLR:$white-clr,$BTN_FS:15px,$BTN_FW:700, $BTN_LH:17.63px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    &:hover{
+        @include ButtonStyle($FF:Public Sans,$BTN_W:129px, $BTN_PY:15px, $BTN_BG_CLR:$white-clr,$BTN_BR_Radius:30px, $BTN_Border_CLR:$white-clr,$BTN_FS:15px,$BTN_FW:700, $BTN_LH:17.63px, $BTN_CLR:#1B262F,$BTN_CASE:inherit);
+    }
+    &:active{
+        box-shadow: 0 0 10px 2px $white-clr;
+    }
+}
+.work__list {
+    width: 536px;
+    @include Display($items:center, $space:space-between, $gap:39px);
+    flex-wrap: wrap;
+}
+.work__item-link{
+    cursor: pointer;
+    &:hover{
+        text-shadow: 0 0 5px;
+    }
+}
+// Responsive
+// Tablet Start
+
+@media (max-width: 1250px){
+    .work-section{
+        padding: 88px 0;
+        background-image: url(/images/work-tablet-bg.png);
+        background-repeat: no-repeat;
+        size: 780px 780px;
+        background-position: center top;
+    }
+    .work{
+        @include Display($items:center, $space:center, $gap:47px);
+        flex-direction: column-reverse;
+    }
+    .work__title{
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .work__text{
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    .work__link{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+// Tablet End
+// Phone Start
+
+@media (max-width: 675px){
+    .work-section{
+        background-color: #1B262F;
+        max-width: 100%;
+        padding: 80px 0;
+        background-image: url(/images/work-phone-bg.png);
+        background-repeat: no-repeat;
+        background-size: 780px auto;
+        background-position: center top;
+    }
+    .work{
+        @include Display($items:center, $space:center, $gap:44px);
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .work__list{
+        width: 280px;
+        flex-wrap: wrap;
+    }
+    .work__title{
+        text-align: center;
+    }
+    .work__text{
+        text-align: center;
+    }
+    .work__link{
+        display: block;
+        margin: 0 auto;
+    }
+    .tesla-img {
+        width: 107px;
+    }
+    .microsoft-img {
+        width: 120px;
+    }
+    .hp-img {
+        width: 115px;
+    }
+    .oracle-img {
+        width: 108px;
+    }
+    .google-img {
+        width: 79px;
+    }
+    .nvidia-img {
+        width: 113px;
+    }
+    
+}
+// Phone End

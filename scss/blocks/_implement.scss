@@ -1,0 +1,51 @@
+.implement-section {
+    padding-top: 150px;
+}
+.implement {
+    @include Display($items:center, $space:start, $gap:125px);
+}
+.implement__content-wrapper {
+    @include Display($items:start, $space:start, $gap:24px);
+    width: 445px;
+    flex-direction: column;
+}
+.implement__title {
+    @include TextStyle($FF:DM Serif Display, $MB:0px, $FS:48px, $FW:400, $CLR:$title-clr, $LH:56px, $CASE:inherit);
+    letter-spacing: -0.3692307770252228px;
+}
+.implement__text {
+    @include TextStyle($FF:Public Sans, $MB:0px, $FS:15px, $FW:400, $CLR:$text-clr, $LH:28px, $CASE:inherit);
+}
+// Responsive
+// Tablet Start
+@media(max-width:1250px){
+    .implement-section{
+        padding: 100px 0;
+    }
+    .implement {
+        @include Display($items:center, $space:start, $gap:48px);
+        flex-direction: column;
+        
+    }
+    .implement__content-wrapper{
+        width: 573px;
+    }
+    .implement__title {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .implement__text {
+        text-align: center;    
+    }
+}
+// Tablet End
+// Phone Start
+@media (max-width: 675px){
+    .implement-section{
+        padding: 80px;
+    }
+    .implement__content-wrapper{
+        width: 328px;
+    }
+}
+// Phone End

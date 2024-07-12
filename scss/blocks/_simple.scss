@@ -1,0 +1,57 @@
+.simple-section {
+    padding: 150px 0 146px;
+    background-image: url(/images/simple-bg.png);
+    background-repeat: no-repeat;
+    background-size: 780px 780px;
+    background-position: calc(89%) center;
+}
+.simple {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.simple__content-wrapper {
+    width: 445px;
+    @include Display($items:start, $space:start, $gap:24px);
+    flex-direction: column;
+}
+.simple__title {
+    @include TextStyle($FF:DM Serif Display, $MB:0px, $FS:48px, $FW:400, $CLR:$title-clr, $LH:56px, $CASE:inherit);
+}
+.simple__text {
+    @include TextStyle($FF:Public Sans, $MB:0px, $FS:15px, $FW:400, $CLR:$text-clr, $LH:28px, $CASE:inherit);
+}
+// Responsive
+// Tablet Start
+@media(max-width:1250px){
+    .simple-section{
+        padding: 0 0 100px;
+        background-image: none;
+    }
+
+    .simple {
+        @include Display($items:center, $space:start, $gap:48px);
+        flex-direction: column-reverse;
+    }
+    .simple__content-wrapper {
+        width: 573px;
+        
+    }
+    .simple__title {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .simple__text {
+        text-align: center;
+    }
+}
+// Tablet End
+// Phone Start
+@media (max-width: 675px){
+    .simple-section{
+        padding-bottom: 80px;
+        background-image: none; 
+    }
+    .simple__content-wrapper {
+        width: 328px; 
+    }
+}
+// Phone End

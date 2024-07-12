@@ -1,0 +1,64 @@
+.site-footer {
+    padding: 31px 0;
+    background-color: #1B262F;
+    background-image: url(/images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.footer {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.footer__content-wrapper{
+    @include Display($items:center, $space:start, $gap:64px);
+}
+.footer__list {
+    @include Display($items:center, $space:start, $gap:40px);
+}
+.site__footer-logo{
+    display: inline-block;
+}
+.footer__icons {
+    @include Display($items:center, $space:start, $gap:24px);
+}
+.footer__link{
+    font-family: Public Sans;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.63px;
+    color: #B7BCC0;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover{
+        text-shadow: 0 0 3px;
+    }
+}
+.footer__web-link{
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+// Responsive
+// Phone Start
+@media (max-width: 770px){
+    .site-footer{
+        padding: 41px 0 55px;
+        background-image: url(/images/footer-phone-bg.png);
+        background-repeat: no-repeat;
+        background-size: 780px 24vh;
+        background-position: center bottom;
+        
+    }
+    .footer {
+        @include Display($items:center, $space:start, $gap:40px);
+        flex-direction: column;
+    }
+    .footer__content-wrapper{
+        @include Display($items:center, $space:start, $gap:64px);
+        flex-direction: column;
+    }
+    .footer__list {
+        @include Display($items:center, $space:start, $gap:31px);
+        flex-direction: column;
+    }
+}
+// Phone End
