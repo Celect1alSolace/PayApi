@@ -35,13 +35,10 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <a class="header__link" href="#work">Schedule a Demo</a>
-                    
-                </div>
+                <a class="header__link" href="#work">Schedule a Demo</a>
             </div>
         </div>
-    </header>
+    </header>   
     <button onclick="handleMenuBtnClick()" class="header__hidden-btn">
         <img src="./images/hamburger-icon.svg" alt="Hamburger Icon" width="28" height="17">
     </button>
@@ -55,7 +52,7 @@
     </div>  
     <!-- Site Header End -->
     <main class="site-main">
-        <!-- Hero Section Start -->
+        <!-- Hero Section Start  -->
         <section class="hero-section">
             <div class="container">
                 <div class="hero">
@@ -70,27 +67,30 @@
                         </form>
                         <p class="hero__text">Have any questions? <a class="hero__text-link" href="#">Contact Us</a></p>
                     </div>
-                    
                 </div>
             </div>
         </section>
-        <!-- Hero Section End -->
+        <!-- Hero Section End  -->
         <!-- Work Section Start -->
         <section class="work-section" id="work">
             <div class="container">
                 <div class="work">
                     <div data-aos="fade-right" class="work__content-wrapper">
-                        <h2 data-aos="fade-left" class="work__title">Who we work with</h2>
-                        <p data-aos="fade-right" class="work__text">Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users. </p>
+                        <div class="work__title-wrapper">
+                            <h2 data-aos="fade-left" class="work__title">Who we work with</h2>
+                        </div>
+                        <div class="work__text-wrapper">
+                            <p data-aos="fade-right" class="work__text">Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users. </p>
+                        </div>
                         <a data-aos="fade-left" class="work__link" href="#finances">About Us</a>
                     </div>
                     <ul data-aos="fade-left" class="work__list">
-                        <li data-aos="fade-right"><a target="blank" class="work__item-link" href="https://www.tesla.com/"><img class="tesla-img" src="./images/tesla-logo.svg" alt="" width="129" height="17"></a></li>
-                        <li data-aos="fade-down"><a target="blank" class="work__item-link" href="https://www.microsoft.com/ru-ru"><img class="microsoft-img" src="./images/microsoft-logo.svg" alt="" width="145" height="31"></a></li>
-                        <li data-aos="fade-left"><a target="blank" class="work__item-link" href="www.hp.com"><img class="hp-img" src="./images/hp-logo.svg" alt="" width="140" height="27"></a></li>
-                        <li data-aos="fade-right"><a target="blank" class="work__item-link" href="https://www.oracle.com/cis/"><img class="oracle-img" src="./images/oracle-logo.svg" alt="" width="131" height="17"></a></li>
-                        <li data-aos="fade-up"><a target="blank" class="work__item-link" href="https://www.google.co.uz/?hl=ru"><img class="google-img" src="./images/google-logo.svg" alt="" width="96" height="33"></a></li>
-                        <li data-aos="fade-left"><a target="blank" class="work__item-link" href="https://www.nvidia.com/download/index.aspx?lang=ru"><img class="nvidia-img" src="./images/nvidia-logo.svg" alt="" width="137" height="26"></a></li>
+                        <li class="work__item" data-aos="fade-right"><a target="blank" class="work__item-link" href="https://www.tesla.com/"><img class="tesla-img" src="./images/tesla-logo.svg" alt="" width="129" height="17"></a></li>
+                        <li class="work__item" data-aos="fade-down"><a target="blank" class="work__item-link" href="https://www.microsoft.com/ru-ru"><img class="microsoft-img" src="./images/microsoft-logo.svg" alt="" width="145" height="31"></a></li>
+                        <li class="work__item" data-aos="fade-left"><a target="blank" class="work__item-link" href="www.hp.com"><img class="hp-img" src="./images/hp-logo.svg" alt="" width="140" height="27"></a></li>
+                        <li class="work__item" data-aos="fade-right"><a target="blank" class="work__item-link" href="https://www.oracle.com/cis/"><img class="oracle-img" src="./images/oracle-logo.svg" alt="" width="131" height="17"></a></li>
+                        <li class="work__item" data-aos="fade-up"><a target="blank" class="work__item-link" href="https://www.google.co.uz/?hl=ru"><img class="google-img" src="./images/google-logo.svg" alt="" width="96" height="33"></a></li>
+                        <li class="work__item" data-aos="fade-left"><a target="blank" class="work__item-link" href="https://www.nvidia.com/download/index.aspx?lang=ru"><img class="nvidia-img" src="./images/nvidia-logo.svg" alt="" width="137" height="26"></a></li>
                     </ul>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                     <img data-aos="fade-left" src="./images/implement-img2.png" alt="Simple Img" width="566" height="500">
                 </div>
             </div>
-        </section>
+        </section> 
         <!-- Finances Section Start -->
         <section class="finances-section" id="finances">
             <div class="container finances">
@@ -158,7 +158,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> 
         <!-- Finances Section End -->
         <!-- Contact Section Start -->
         <section class="contact-section" id="contact">
@@ -173,7 +173,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> 
         <!-- Contact Section End -->
         <!-- Implement section End -->
     </main>
@@ -195,7 +195,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> 
     <script src="./js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

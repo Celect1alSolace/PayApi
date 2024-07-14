@@ -98,7 +98,7 @@
         border: none;
         z-index: 52;
         top: 1.5vh;
-        right: 4vh;
+        right: 2vh;
     }
     .header__hidden-content {
         display: inline-block;
@@ -146,5 +146,22 @@
     .show{
         top: 0;
     }
+}
+@media(max-width:350px){
+    .site-header {
+        width: 100%;
+        top: 0;
+        position: fixed;
+        background-color: $white-clr;
+        z-index: 50;
+        padding: 5px 0;
+    }
+    body {
+        width: 100%;
+        background-image: url(/images/phone-body-bg-img.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center top;
+    }   
 }
 // Phone End

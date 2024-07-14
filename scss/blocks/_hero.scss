@@ -114,7 +114,7 @@
     }   
     .hero {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         margin: 0 auto;
         gap: 48px;
     }
@@ -123,8 +123,7 @@
     }
     .hero__content-wrapper {
         width: 327px;
-        margin: 0 auto
-        ;
+        margin: 0 auto;
     }
     .hero__title {
         font-family: DM Serif Display;

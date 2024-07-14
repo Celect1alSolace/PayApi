@@ -82,7 +82,7 @@
         padding: 80px 0;
         background-image: url(/images/work-phone-bg.png);
         background-repeat: no-repeat;
-        background-size: 780px auto;
+        background-size: contain;
         background-position: center top;
     }
     .work{
@@ -123,5 +123,25 @@
         width: 113px;
     }
     
+}
+@media(max-width:468px){
+    .work-section{
+        width: 100%;
+    }
+    .work__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .work__item{
+        text-align: center;
+    }
+    .work__title-wrapper{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .work__text-wrapper{
+        width: 300px;
+        margin: 0 auto;
+    }
 }
 // Phone End
